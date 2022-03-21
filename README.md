@@ -1,10 +1,128 @@
-# Template Assignment
+# Nim Project
 
 ## Problem Statement
 
+In the game of nim two players compete to be the last one to grab all remaining matches from a set of piles.
+
+To start the game, three heaps of matches are made:
+
+- Heap A: 3 matches
+- Heap B: 4 matches
+- Heap C: 5 matches
+
+Each player alternates turns grabbing any amount of matches from 1 heap. They may not mix and match matches from different heaps.
+
+The game ends when a player successfully takes the last match, and leaves the opponent unable to take a match.
+
+Another version of the game exists where the last player to take a match loses as well. Either version of the game is a valid submission for this project.
+
+### An example game
+
+| Heap A | Heap B | Heap C | Move |
+| - | - | - | - |
+| 3 | 4 | 5 | Game begins |
+| 1 | 4 | 5 | Bob takes 2 from A |
+| 1 | 4 | 2 | Alice takes 3 from C |
+| 1 | 3 | 2 | Bob takes 1 from B |
+| 1 | 2 | 2 | Alice takes 1 from B |
+| 0 | 2 | 2 | Bob takes entire A heap, leaving two 2s |
+| 0 | 1 | 2 | Alice takes 1 from B |
+| 0 | 1 | 1 | Bob takes 1 from C leaving two 1s. (In misère play he would take 2 from C leaving (0, 1, 0).) |
+| 0 | 0 | 1 | Alice takes 1 from B |
+| 0 | 0 | 0 | Bob takes entire C heap and wins |
+
+### Requirements
+
+- Your game must be a proper implementation of the game of nim.
+- You must user proof any player input. 
+    - if the user enters something invalid, tell them it was not valid and prompt them again.
+- You must display the current state of the game before any player takes a turn.
+
+You may add the additional features as bonus:
+
+- Allow the user to play again without re running the program. (to earn this point, you must ask the player if they want to play again, not just loop forever)
+- Allow the user(s) to select custom values for each of the heaps before playing.
+- Allow the user(s) to select a game mode (normal or misere play)
+
 ## Input Description
 
+You are defining the input and output yourself. Please include a description of your controls.
+
 ## Sample Input/Output
+
+You are defining the input and output of the game. There is no defined input and output, however, the following is just ***one example*** of a working game.
+
+```
+Welcome to the game of Nim!
+
+Currently the heaps are as follows:
+
+   Heap A: | | |
+   Heap B: | | | |
+   Heap C: | | | | |
+   
+Player 1, which heap would you like to take from? A
+How much? 2
+
+Currently the heaps are as follows:
+
+   Heap A: |
+   Heap B: | | | |
+   Heap C: | | | | |
+   
+Player 2, which heap would you like to take from? C
+How much? 6
+
+That is not a valid move!
+
+Player 2, which heap would you like to take from? C
+How much? 5
+
+Currently the heaps are as follows:
+
+   Heap A: |
+   Heap B: | | | |
+   Heap C:
+   
+Player 1, which heap would you like to take from? D
+
+That is not a valid move!
+
+Player 1, which heap would you like to take from? B
+How much? 3
+
+Currently the heaps are as follows:
+
+   Heap A: |
+   Heap B: |
+   Heap C:
+   
+Player 2, which heap would you like to take from? A
+How much? 0
+
+That is not a valid move!
+
+Player 2, which heap would you like to take from? A
+How much? 1
+
+Currently the heaps are as follows:
+
+   Heap A:
+   Heap B: |
+   Heap C:
+
+Player 1, which heap would you like to take from? B
+How much? 1
+
+Currently the heaps are as follows:
+
+   Heap A:
+   Heap B: |
+   Heap C:
+
+Congrats Player 1! You won!
+
+```
 
 ## Submission
 
